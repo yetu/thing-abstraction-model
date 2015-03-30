@@ -3,3 +3,4 @@
 ThingModel/src/main/java/com/yetu/abstraction/model
 plugin.xml
 MANIFEST.MF
+ThingSpecification/src/main/java/com/yetu/abstraction/spec

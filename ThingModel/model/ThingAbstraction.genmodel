@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ThingModel/src/main/java" editDirectory="/ThingModel.edit/src/main/java"
     editorDirectory="/ThingModel.editor/src/main/java" modelPluginID="ThingModel"
     modelName="ThingAbstraction" modelPluginClass="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    testsDirectory="/ThingModel.tests/src/main/test" importerID="org.eclipse.emf.importer.ecore"
+    testsDirectory="/ThingModel.tests/src/test/java" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="7.0" copyrightFields="false" language="" operationReflection="true"
     importOrganizing="true">
   <foreignModel>ThingAbstraction.ecore</foreignModel>
