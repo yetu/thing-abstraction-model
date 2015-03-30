@@ -1,1 +1,5 @@
 .metadata
+*.class
+ThingModel/src/main/java/com/yetu/abstraction/model
+plugin.xml
+MANIFEST.MF
