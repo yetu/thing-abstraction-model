@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ThingAbstraction -->
+      <package
+            uri="http://yetu.com/models/abstraction"
+            class="com.yetu.abstraction.model.ModelPackage"
+            genModel="model/ThingAbstraction.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ThingAbstraction -->
+      <parser
+            type="model"
+            class="com.yetu.abstraction.model.util.ModelResourceFactoryImpl"/>
+   </extension>
+
+</plugin>
