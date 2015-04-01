@@ -77,8 +77,8 @@
         eType="#//EventTemplate" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" eType="#//ActionTemplate"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" changeable="false"
-        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActionTemplate">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
