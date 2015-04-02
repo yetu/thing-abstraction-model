@@ -31,9 +31,8 @@
         eType="#//ActionParameter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" lowerBound="1"
-        upperBound="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Event"/>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
