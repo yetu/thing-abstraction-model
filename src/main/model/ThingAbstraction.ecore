@@ -53,6 +53,7 @@
     <eLiterals name="UNDEFINED" literal="UNDEFINED"/>
     <eLiterals name="BOOLEAN" value="1" literal="BOOLEAN"/>
     <eLiterals name="NUMBER" value="2" literal="NUMBER"/>
+    <eLiterals name="STRING" value="3" literal="STRING"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Unit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
