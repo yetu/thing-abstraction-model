@@ -12,23 +12,33 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="connectionDetails" upperBound="-1"
         eType="#//ConnectionDetails" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-        eType="#//Component" containment="true"/>
+        eType="#//Component" containment="true" eOpposite="#//Component/thing"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Capability">
+    <eOperations name="getProperty" lowerBound="1" eType="#//Property">
+      <eParameters name="propertyName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="events" upperBound="-1"
         eType="#//Event" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
         eType="#//Action" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//Property" containment="true"/>
+        eType="#//Property" containment="true" eOpposite="#//Property/capability"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
+        eType="#//Component" eOpposite="#//Component/capabilities"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Property">
+    <eOperations name="setValue" lowerBound="1">
+      <eParameters name="valueAsString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="writable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="unit" lowerBound="1" eType="#//Unit"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
+        eType="#//Capability" eOpposite="#//Capability/properties"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Action">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -52,7 +62,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
-        eType="#//Capability" containment="true"/>
+        eType="#//Capability" containment="true" eOpposite="#//Capability/component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="thing" lowerBound="1" eType="#//Thing"
+        eOpposite="#//Thing/components"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ValueType">
     <eLiterals name="UNDEFINED" literal="UNDEFINED"/>
