@@ -18,7 +18,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayType" lowerBound="1"
         eType="#//ComponentType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" lowerBound="1"
-        eType="#//ThingStatus" defaultValueLiteral="0"/>
+        eType="#//ThingStatus"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Capability">
     <eOperations name="getProperty" lowerBound="1" eType="#//Property">
