@@ -17,6 +17,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="mainComponent" eType="#//Component"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayType" lowerBound="1"
         eType="#//ComponentType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" lowerBound="1"
+        eType="#//ThingStatus" defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Capability">
     <eOperations name="getProperty" lowerBound="1" eType="#//Property">
@@ -94,5 +96,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="ActionParameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="unit" lowerBound="1" eType="#//Unit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ThingStatus">
+    <eLiterals name="UNKNOWN"/>
+    <eLiterals name="ONLINE" value="1"/>
+    <eLiterals name="OFFLINE" value="2"/>
   </eClassifiers>
 </ecore:EPackage>
